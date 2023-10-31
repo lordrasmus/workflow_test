@@ -9,9 +9,7 @@ jobs:
 
 
   call-workflow-passing-data:
-
     uses: ./.github/workflows/workflow-B.yml
     with:
       config-path: .github/labeler.yml
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
+    
