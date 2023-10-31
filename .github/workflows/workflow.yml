@@ -6,8 +6,7 @@ on:
       - main
 
 jobs:
-  call-workflow:
-    uses: ./.github/workflows/workflow-A.yml
+
 
   call-workflow-passing-data:
     permissions:
