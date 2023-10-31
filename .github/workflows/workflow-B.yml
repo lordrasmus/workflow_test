@@ -12,6 +12,6 @@ jobs:
   triage:
     runs-on: ubuntu-latest
     steps:
-    - name: Out
-      run: |
-        echo configuration-path: ${{ inputs.config-path }}
+      - name: Out
+        run: |
+          echo configuration-path: ${{ inputs.config-path }}
