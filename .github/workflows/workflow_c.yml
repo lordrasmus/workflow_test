@@ -1,4 +1,4 @@
-name: Call a reusable workflow
+name: workflow C
 
 on:
   push:
@@ -16,4 +16,5 @@ jobs:
         run: |
           echo UPLOAD_KEY: ${{ secrets.UPLOAD_KEY }}
           echo UPLOAD_KEY: $UPLOAD_KEY
+          python test.py
           
