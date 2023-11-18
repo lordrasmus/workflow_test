@@ -1,11 +1,9 @@
 name: Reusable workflow example
 
 on:
-  workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
+  push:
+    branches:
+      - main
 
 
 jobs:
@@ -13,5 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Out
+        env:
+          UPLOAD_KEY: ${{ secrets.UPLOAD_KEY }} 
         run: |
-          echo configuration-path: ${{ inputs.config-path }}
+          echo UPLOAD_KEY: ${{ secrets.UPLOAD_KEY }}
+          echo UPLOAD_KEY: $UPLOAD_KEY
+          

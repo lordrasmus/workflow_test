@@ -1,0 +1,15 @@
+name: Call a reusable workflow
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Out
+        run: |
+          echo configuration-path: ${{ inputs.config-path }}
